@@ -66,3 +66,129 @@ h1, h2 {
     background-color: var(--blanco);
     padding: 5rem;
 }
+
+/* DIFERENTES DISPLAY FLEX */
+
+.d-flex {
+    display: flex;
+}
+
+/* Flex direccion */
+.d-flex-2 {
+    display: flex;
+    flex-direction: column;
+}
+
+/* JUSTIFY CONTENT */
+.d-flex-3 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.d-flex-4 {
+    height: 100rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+/*Aling items*/
+.d-flex-5 {
+    height: 100rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.d-flex-6 {
+    display: flex;
+    flex-direction: column;
+    align-items: center ;
+}
+
+/* Justify content y aling items */
+.d-flex-7 {
+    height: 100rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;    
+}
+
+/* Flex basis */
+
+.d-flex-8 {
+    display: flex;
+}
+
+.d-flex-8 .box {
+    flex-basis: 200px;
+}
+
+.d-flex-9 {
+    display: flex  ;
+    justify-content: space-between;
+    /* gap: 2rem; */
+}
+
+.d-flex-9 .box:nth-child(1) {
+    flex-basis: calc(50% - 1rem);
+}
+
+.d-flex-9 .box:nth-child(2),
+.d-flex-9 .box:nth-child(3) {
+    flex-basis: calc(25% -1rem);
+}
+
+.d-flex-10{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.d-flex-10 .box {
+    flex-basis: 33.33%;
+}
+
+.d-flex-11 {
+    display: flex;
+}
+
+.d-flex-11 .box:not( .d-flex-11 .box:nth-child(1) ) {
+    flex-grow: 1;
+}
+
+.d-flex-11 .box:nth-child(1) {
+    flex-grow: 3;
+}
+
+.d-flex-12 {
+    display: flex;
+}
+
+.d-flex-12 .box {
+    flex-grow: 1; /* El flex grow es el factor de crecimiento */
+    flex-basis: 300px;
+}
+
+.d-flex-12 .box:nth-child(3) {
+    flex-shrink: 2; /* Factor de encogimiento  */
+}
+
+.d-flex-13 {
+    display: flex;
+    justify-content: space-between;
+}
+
+/*
+.d-flex-13 .box {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 33.3%;
+}
+flex ya tiene estos mes de manera implicita
+*/
+
+.d-flex-13 .box {
+    flex: 0 0 calc(33.3% - 1rem);
+}
